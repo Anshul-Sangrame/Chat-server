@@ -8,7 +8,7 @@ const STATIC_PATH = path.join(process.cwd(), "views");
 const server = http.createServer((req, res) => {
   try {
     console.log(`${req.method} ${req.url}`)
-    console.log(`${req.socket.remoteAddress}`)
+    console.log(`${req.socket.localAddress}`)
     const file_path = path.join(STATIC_PATH, ((req.url === "/") ? "index.html" : req.url))
     fs.accessSync(file_path)
     res.writeHead(200, "OK")
