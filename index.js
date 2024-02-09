@@ -7,7 +7,6 @@ const STATIC_PATH = path.join(process.cwd(), "views");
 // Create a local server to receive data from
 const server = http.createServer((req, res) => {
   try {
-    if (req.)
     console.log(`${req.method} ${req.url}`)
     const file_path = path.join(STATIC_PATH, ((req.url === "/") ? "index.html" : req.url))
     fs.accessSync(file_path)
