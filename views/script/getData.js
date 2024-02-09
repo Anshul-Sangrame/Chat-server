@@ -1,0 +1,1 @@
+let el = Document.prototype.getElementById()
